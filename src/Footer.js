@@ -7,9 +7,7 @@ const Footer = () => {
     <div className="container-fluid flex-grow-1 ">
       <div className="row py-5">
         <div className="col-lg-12  text-white text-center">
-          <h1 className="display-3 ">BooksWagon</h1>
-          <p className="lead mb-0">This footer is created by using Bootstrap.</p>
-          <p className="lead py-3"></p>
+         
                         
          
       </div>
@@ -24,7 +22,7 @@ const Footer = () => {
       <div className="row py-3">
 
         <div className="col-lg-2 col-md-6 mb-4 mb-lg-0">
-          <h6 className="text-uppercase font-weight-bold mb-4" style={{color:'red'}}>Company</h6>
+          <h6 className="text-uppercase font-weight-bold mb-4" style={{color:'blue'}}>Company</h6>
           <ul className="list-unstyled mb-0">
             <li className="mb-2">
             <Link className="nav-link active" aria-current="page" to="/contact">ContactUs</Link>
@@ -42,7 +40,7 @@ const Footer = () => {
         </div>
         
         <div className="col-lg-2 col-md-6 mb-4 mb-lg-0">
-          <h6 className="text-uppercase font-weight-bold mb-4" style={{color:'red'}}>Policies</h6>
+          <h6 className="text-uppercase font-weight-bold mb-4" style={{color:'blue'}}>Policies</h6>
           <ul className="list-unstyled mb-0">
             <li className="mb-2">
             <Link className="nav-link active" aria-current="page" to="/privacy">Privacy Policies</Link>
@@ -60,7 +58,7 @@ const Footer = () => {
         </div>
 
         <div className="col-lg-2 col-md-6 mb-4 mb-lg-0">
-          <h6 className="text-uppercase font-weight-bold mb-4" style={{color:'red'}}>Help</h6>
+          <h6 className="text-uppercase font-weight-bold mb-4" style={{color:'blue'}}>Help</h6>
           <ul className="list-unstyled mb-0">
             <li className="mb-2">
             <Link className="nav-link active" aria-current="page" to="/payment">Payment</Link>
@@ -78,7 +76,7 @@ const Footer = () => {
         </div>
 
         <div className="col-lg-2 col-md-6 mb-4 mb-lg-0">
-        <h6 className="text-uppercase font-weight-bold mb-4" style={{color:'red'}}>Misc</h6>
+        <h6 className="text-uppercase font-weight-bold mb-4" style={{color:'blue'}}>Misc</h6>
         <ul className="list-unstyled mb-0">
           <li className="mb-2">
           <Link className="nav-link active" aria-current="page" to="/affiliate">Affiliate</Link>

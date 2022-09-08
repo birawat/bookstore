@@ -1,7 +1,7 @@
 body {
   background: #ff5f6d;
   background: -webkit-linear-gradient(to right, #00001a, #aeaeec);
-  background: linear-gradient(to right, #d8edf8, #f34747);
+  background: linear-gradient(to right, #d8edf8, #370cc4);
   min-height: 100vh;
   font-family: 'Sanchez', serif;
 }
