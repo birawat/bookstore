@@ -1,6 +1,7 @@
 .footer{
-    display: 'flex';
-    flex-direction: 'column'
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right, #d8edf8, #370cc4);
     }
 
 

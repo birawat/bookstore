@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import './App.css';
-import  Footer  from '../src/Footer/index';
+import  Footer  from '../src/Footer';
 import About from '../src/Footer/About';
 import Contact from '../src/Footer/ContactUs';
 import Blog from '../src/Footer/Blog';

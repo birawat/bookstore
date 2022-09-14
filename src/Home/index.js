@@ -1,23 +1,19 @@
-import React from 'react'
+import {React,useState, useEffect} from 'react'
 import axios from 'axios'
-import { useState, useEffect } from 'react'
+
 import './Home.css'
 import Slider from '../Slider'
 const Home = () => {
-    const [myData, setMyData] = useState([])
+    const [myData, setMyData] = useState()
     async function fetchMyAPI() {
-        console.log("fetchapi")
         const response = await axios.get("https://www.googleapis.com/books/v1/volumes?q=Books")
-        console.log(response.data.items)
         setMyData(response.data.items)
     }
     useEffect(() => {
+        if(!myData){
          fetchMyAPI()
-        return () => {
-
-            fetchMyAPI()
         }
-    }, [])
+    }, [myData])
     return (
 
         <div >
@@ -28,14 +24,14 @@ const Home = () => {
           
             {
                 myData?.map((post, index) => {
-                    debugger
+              
                     return (
                         <>
                         <div key={index}>
                         <div  className="col-3 " class='col3'>
                         <div className="card" >
                         <div style={{ marginTop: '10px'}}>
-                            <img className="card-img-top" src={post.volumeInfo.imageLinks.thumbnail} alt="..."
+                            <img className="card-img-top" src={post.volumeInfo.imageLinks.thumbnail} alt="books"
                                 class='img'/></div>
                                 <div className="card-body">
                                     <h5 className="card-title" class='title'>{post.volumeInfo.title}</h5>
