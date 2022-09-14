@@ -1,27 +1,24 @@
 /* eslint-disable react/jsx-no-undef */
 import React from 'react'
 import {Link} from 'react-router-dom'
+
+import './Footer.css'
+
 const Footer = () => {
   return (
     <div>
     <div className="container-fluid flex-grow-1 ">
       <div className="row py-5">
         <div className="col-lg-12  text-white text-center">
-         
-                        
-         
       </div>
     </div>
   </div>
-  
-
-
-
+ 
   <footer className="bg-white">
-    <div className="container py-5">
-      <div className="row py-3">
+    <div className=" py-5 flex-container" class='footer'>
+      <div className="row py-3 flex-child " style={{justifyContent: 'space-evenly'}}>
 
-        <div className="col-lg-2 col-md-6 mb-4 mb-lg-0">
+        <div className="col-lg-2 col-md-6 mb-4 mb-lg-0 flex-child" >
           <h6 className="text-uppercase font-weight-bold mb-4" style={{color:'blue'}}>Company</h6>
           <ul className="list-unstyled mb-0">
             <li className="mb-2">
@@ -39,7 +36,7 @@ const Footer = () => {
           </ul>
         </div>
         
-        <div className="col-lg-2 col-md-6 mb-4 mb-lg-0">
+        <div className="col-lg-2 col-md-6 mb-4 mb-lg-0 flex-child">
           <h6 className="text-uppercase font-weight-bold mb-4" style={{color:'blue'}}>Policies</h6>
           <ul className="list-unstyled mb-0">
             <li className="mb-2">
@@ -57,7 +54,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="col-lg-2 col-md-6 mb-4 mb-lg-0">
+        <div className="col-lg-2 col-md-6 mb-4 mb-lg-0 flex-child">
           <h6 className="text-uppercase font-weight-bold mb-4" style={{color:'blue'}}>Help</h6>
           <ul className="list-unstyled mb-0">
             <li className="mb-2">
@@ -75,7 +72,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="col-lg-2 col-md-6 mb-4 mb-lg-0">
+        <div className="col-lg-2 col-md-6 mb-4 mb-lg-0 flex-child">
         <h6 className="text-uppercase font-weight-bold mb-4" style={{color:'blue'}}>Misc</h6>
         <ul className="list-unstyled mb-0">
           <li className="mb-2">

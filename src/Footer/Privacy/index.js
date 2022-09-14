@@ -1,5 +1,5 @@
 import React from 'react'
-import Footer from './Footer'
+
 
 const Privacy = () => {
   return (
@@ -37,7 +37,7 @@ We make use of the best security measures for the protection against the misuse,
 <h5><b>Contacting Bookswagon.com</b></h5>
 <p>If there is any changes that you would like to make in your current information then do remove your previous contact details so that you don’t get any updates in your old contacts. </p>
    
-<Footer/>
+
 </div>
   )
 }

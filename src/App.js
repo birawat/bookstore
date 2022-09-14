@@ -1,26 +1,31 @@
+import React from 'react';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import './App.css';
-import  Footer  from './Footer';
-import About from './About';
-import Contact from './Contact';
-import Blog from './Blog';
-import Career from './Career';
-import CopyrightPolicy from './CopyrightPolicy';
-import Term from './Term';
-import Secure from './Secure';
-import Privacy from './Privacy';
-import Payment from './Payment';
-import Shipping from './Shipping';
-import Returns from './Returns';
-import Faq from './Faq';
-import Affiliate from './Affiliate';
-import Sitemap from './Sitemap';
+import  Footer  from '../src/Footer/index';
+import About from '../src/Footer/About';
+import Contact from '../src/Footer/ContactUs';
+import Blog from '../src/Footer/Blog';
+import Career from '../src/Footer/Career';
+import CopyrightPolicy from '../src/Footer/CopyrightPolicy';
+import Term from '../src/Footer/Term';
+import Secure from '../src/Footer/Secure';
+import Privacy from '../src/Footer/Privacy';
+import Payment from '../src/Footer/Payment';
+import Shipping from '../src/Footer/Shipping';
+import Returns from '../src/Footer/Returns';
+import Faq from '../src/Footer/Faq';
+import Affiliate from '../src/Footer/Affiliate';
+import Sitemap from '../src/Footer/Sitemap';
+import Home from './Home';
+
 function App() {
   return (
     <div >
     <BrowserRouter>
+    
+    
   <Routes>
-  <Route path='/' element={<Footer/>}/>
+  <Route  path='/' element={<Home/>}/>
   <Route path='/about' element={<About/>}/>
   <Route path='/contact' element={<Contact/>}/>
   <Route path='/career' element={<Career/>}/>
@@ -36,7 +41,9 @@ function App() {
   <Route path='/affiliate' element={<Affiliate/>}/>
   <Route path='/sitemap' element={<Sitemap/>}/>
   </Routes>
+  <Footer/>
     </BrowserRouter>
+   
     </div>
   );
 }
