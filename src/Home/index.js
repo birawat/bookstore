@@ -17,7 +17,7 @@ const Home = () => {
     return (
 
         <div >
-        <Slider/>
+      <Slider/>
         <div className="container-fluid flex-grow-1 ">
         <div className="row py-5">
           <div className="col-lg-12  text-white text-center">
@@ -28,7 +28,7 @@ const Home = () => {
                     return (
                         <>
                         <div key={index}>
-                        <div  className="col-3 " class='col3'>
+                        <div  className="col-3 col3" >
                         <div className="card" >
                         <div style={{ marginTop: '10px'}}>
                             <img className="card-img-top" src={post.volumeInfo.imageLinks.thumbnail} alt="books"
