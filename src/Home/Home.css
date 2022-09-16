@@ -1,15 +1,29 @@
-.col3{
-    width: 150px; height: 300px; margin: 10px; float: left; overflow: hidden;
+.col3 {
+  width: 140px;
+  height: 275px;
+  margin: 10px;
+  float: left;
+  overflow: hidden;
 }
-.card{
-    width: 150px; height: 300px; overflow: hidden; border: 1px solid;
+.card {
+  width: 150px;
+  height: 300px;
+  overflow: hidden;
+  border: 1px solid;
 }
-.img{
-    border: 1px solid black; width: 70%; height: 200px; 
+.img {
+  border: 1px solid black;
+  width: 70%;
+  height: 200px;
 }
-.title{
-    text-decoration-line:'underline'; color:black;
+.title {
+  text-decoration-line: "underline";
+  color: black;
 }
-.p{
-    color:black; font-size: small; height: 123px; margin: 10px; padding: 10px; 
+.p {
+  color: black;
+  font-size: small;
+  height: 123px;
+  margin: 10px;
+  padding: 10px;
 }

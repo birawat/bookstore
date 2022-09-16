@@ -13,12 +13,11 @@ const Home = () => {
         setMyData(response.data.items)
     }
     useEffect(() => {
-         fetchMyAPI()
-        return () => {
-
+        debugger;
+        if(!myData){
             fetchMyAPI()
         }
-    }, [])
+    }, [myData])
     return (
 
         <div >
@@ -41,7 +40,6 @@ const Home = () => {
                                 class='img'/></div>
                                 <div className="card-body">
                                     <h5 className="card-title" class='title'>{post.volumeInfo.title}</h5>
-                                    
                                 </div>
                             </div>
                             </div>
