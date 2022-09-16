@@ -3,6 +3,7 @@ import axios from 'axios'
 import { useState, useEffect } from 'react'
 import './Home.css'
 import Slider from '../Slider'
+import { HomeNavbar } from '../HomeNavbar'
 const Home = () => {
     const [myData, setMyData] = useState([])
     async function fetchMyAPI() {
@@ -22,6 +23,7 @@ const Home = () => {
 
         <div >
         <Slider/>
+        <HomeNavbar/>
         <div className="container-fluid flex-grow-1 ">
         <div className="row py-5">
           <div className="col-lg-12  text-white text-center">
