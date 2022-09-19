@@ -1,9 +1,11 @@
 body {
-   background: white;
- 
+  background: white;
+
   min-height: 100vh;
-  font-family: 'Sanchez', serif;
-   background-image: url("https://images.unsplash.com/photo-1544716278-e513176f20b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTJ8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80");
+  font-family: "Sanchez", serif;
+  background-image: url("https://images.unsplash.com/photo-1544716278-e513176f20b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTJ8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #button-addon1 {
@@ -12,7 +14,8 @@ body {
 
 i {
   color: #0000cc;
-  font-size: 20px;}
+  font-size: 20px;
+}
 
 .form-control::placeholder {
   font-size: 0.95rem;
@@ -24,17 +27,16 @@ i {
   box-shadow: none;
 }
 
- 
-.display-3{
-  font-family: 'Sanchez', serif;
+.display-3 {
+  font-family: "Sanchez", serif;
 }
 
-p{
-  font-family: 'Tajawal', sans-serif;
+p {
+  font-family: "Tajawal", sans-serif;
 }
 
-.lead{
-  font-family: 'Sanchez 200', serif;
+.lead {
+  font-family: "Sanchez 200", serif;
 }
 
 .App {
