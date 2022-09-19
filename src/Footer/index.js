@@ -1,8 +1,8 @@
 /* eslint-disable react/jsx-no-undef */
-import React from 'react'
-import { Link } from 'react-router-dom'
-
-import './Footer.css'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import CopyrightPolicy from './CopyrightPolicy';
+import './Footer.css';
 
 const Footer = () => {
     return (
@@ -85,14 +85,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-
-                <div className="bg-light py-2 footer"  >
-                    <div className="container text-center">
-                        <p className="text-muted mb-0 py-2">&copy; Bootstrap All risghts reserved.</p>
-
-                    </div>
-                </div>
-
+                <CopyrightPolicy />
             </footer>
         </div>
     )

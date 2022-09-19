@@ -2,7 +2,7 @@ import {React,useState, useEffect} from 'react'
 import axios from 'axios'
 
 import './Home.css'
-import Slider from '../Slider'
+import Slider from '../../Slider'
 const Home = () => {
     const [myData, setMyData] = useState()
     async function fetchMyAPI() {
