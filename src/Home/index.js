@@ -29,7 +29,6 @@ const Home = () => {
           
             {
                 myData?.map((post, index) => {
-                    debugger
                     return (
                         <>
                         <div key={index}>
