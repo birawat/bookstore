@@ -16,10 +16,10 @@ const Contact = () => {
                             </p>
                             <p>
                                 <input id="email" className="form-input" type="email" placeholder="Your Email*" />
-                          </p>
+                            </p>
                             <p className="full-width">
                                 <input id="company-name" className="form-input" type="text" placeholder="Company Name*" required />
-                                
+
                             </p>
                             <p className="full-width">
                                 <textarea minlength="20" id="message" cols="30" rows="7" placeholder="Your Message*" required></textarea>
