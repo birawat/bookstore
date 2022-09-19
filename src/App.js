@@ -10,7 +10,7 @@ import CopyrightPolicy from '../src/Footer/CopyrightPolicy';
 import Term from '../src/Footer/Term';
 import Secure from '../src/Footer/Secure';
 import Privacy from '../src/Footer/Privacy';
-import Payment from '../src/Footer/Payment';
+import Payment from './Footer/Payment';
 import Shipping from '../src/Footer/Shipping';
 import Returns from '../src/Footer/Returns';
 import Faq from '../src/Footer/Faq';

@@ -1,6 +1,6 @@
 .col3 {
-  width: 150px;
-  height: 300px;
+  width: 140px;
+  height: 275px;
   margin: 10px;
   float: left;
   overflow: hidden;
@@ -19,4 +19,11 @@
 .title {
   text-decoration-line: "underline";
   color: black;
+}
+.p {
+  color: black;
+  font-size: small;
+  height: 123px;
+  margin: 10px;
+  padding: 10px;
 }
