@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Navbar() {
   return (
@@ -9,11 +10,15 @@ export default function Navbar() {
 					<div className="col">
                         <div className="main_nav_content d-flex flex-row">
                             <div className="main_nav_menu">
+								
 								<ul className="standard_dropdown main_nav_dropdown" >
-									<li><a href="#" className='text-white'>Books<i className="fas fa-chevron-down"></i></a></li>
+								
+									<li><Link href="#" id="books" className='text-white' to="/">Books<i className="fas fa-chevron-down"></i></Link></li>
+									
 									<li className="hassubs">
-										<a href="#" className='text-white'>New Arrivals<i className="fas fa-chevron-down"></i></a>
+										<a href="#" id="newArrivals" className='text-white'>New Arrivals<i className="fas fa-chevron-down"></i></a>
 										<ul>
+										
 											
 											
 										</ul>
@@ -31,7 +36,7 @@ export default function Navbar() {
                                     <li><a href="contact.html" className='text-white'>Award Winners<i className="fas fa-chevron-down"></i></a></li>
                                     <li><a href="contact.html" className='text-white'>Featured Authors<i className="fas fa-chevron-down"></i></a></li>
 
-                                    <li><a href="contact.html" className='text-white'>Request a Book<i className="fas fa-chevron-down"></i></a></li>
+                                    <li><Link href="contact.html" className='text-white' to="/requestbook">Request a Book<i className="fas fa-chevron-down"></i></Link></li>
 
                                 </ul>
 							</div>

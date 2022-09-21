@@ -5,17 +5,15 @@ import './Home.css'
 import Slider from '../../Slider'
 const Home = () => {
     const [myData, setMyData] = useState()
+    const [book, setBook] = useState("newArrivals")
     async function fetchMyAPI() {
-        const response = await axios.get("https://www.googleapis.com/books/v1/volumes?q=Books")
+        const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${book}`)
         setMyData(response.data.items)
     }
     useEffect(() => {
-        if(!myData){
-         fetchMyAPI()
-        }
-    }, [myData])
+         fetchMyAPI()        
+    }, [setBook])
     return (
-
         <div >
         <Slider/>
         <div className="container-fluid flex-grow-1 ">

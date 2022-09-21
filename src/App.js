@@ -19,16 +19,22 @@ import Sitemap from './MainContent/Sitemap';
 import Home from './MainContent/Home';
 import MainHeader from './MainHeader';
 import MainContent from './MainContent';
+import Wishlist from './MainHeader/Wishlist';
+import RequestBook from './MainContent/RequestBook';
 
 
 function App() {
+
   const [modal, setModal] = useState(false);
+
+
 
   return (
     <div >
       <BrowserRouter>
-        <MainHeader setModal={setModal} />
+        <MainHeader setModal={setModal}/>
         <MainContent setModal={setModal} modal={modal}/>
+        
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
@@ -44,6 +50,8 @@ function App() {
           <Route path='/faq' element={<Faq />} />
           <Route path='/affiliate' element={<Affiliate />} />
           <Route path='/sitemap' element={<Sitemap />} />
+          <Route path='/wishlist' element={<Wishlist/>}/>
+          <Route path='/requestbook' element={<RequestBook/>}/>
         </Routes>
         <Footer />
       </BrowserRouter>
