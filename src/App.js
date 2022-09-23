@@ -25,7 +25,6 @@ function App() {
   const [modal, setModal] = useState(false);
 
   return (
-    <div >
       <BrowserRouter>
         <MainHeader setModal={setModal} />
         <MainContent setModal={setModal} modal={modal}/>
@@ -47,8 +46,6 @@ function App() {
         </Routes>
         <Footer />
       </BrowserRouter>
-
-    </div>
   );
 }
 
