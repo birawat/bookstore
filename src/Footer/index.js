@@ -1,8 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Fdata from './Fdata'
-import CopyrightPolicy from './CopyrightPolicy';
-import './Footer.css';
+import './Footer.css'
 const Footer = () => {
     return (
         <div>
@@ -34,7 +33,7 @@ const Footer = () => {
                 </div>
                 <div className="bg-light py-2 footer"  >
                     <div className="container text-center">
-                        <CopyrightPolicy />
+                        <p className="text-muted mb-0 py-2">&copy; Bootstrap All risghts reserved.</p>
                     </div>
                 </div>
             </footer>
