@@ -3,9 +3,7 @@ import './RequestBook.css'
 
 export default function RequestBook() {
     return (
-
-        <div className=' d-flex justify-content-center mt-30'>
-            
+        <div className=' d-flex justify-content-center mt-30'>            
             <div className="border w-75">
             <h4 className='floatheading'>RequestBook</h4>
                 <form className='p-4'>

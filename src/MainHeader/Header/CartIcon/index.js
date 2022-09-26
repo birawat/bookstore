@@ -2,14 +2,12 @@ import React from 'react'
 
 
 export default function CartIcon({ setModal }) {
-  const handelCart = () => {
-    setModal(true)
-  }
+  
   return (
     <div>
       <div className="cart" >
       
-        <div className="cart_container d-flex flex-row align-items-center justify-content-end" onClick={handelCart}>
+        <div className="cart_container d-flex flex-row align-items-center justify-content-end" onClick={() => setModal(true)}>
           <div className="cart_icon">
           <a href="#"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918704/cart.png" alt=""/></a>
             <div className="cart_count"><span>3</span></div>

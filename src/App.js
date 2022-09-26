@@ -16,21 +16,21 @@ import Returns from './MainContent/Returns';
 import Faq from './MainContent/Faq';
 import Affiliate from './MainContent/Affiliate';
 import Sitemap from './MainContent/Sitemap';
-import Home from './MainContent/Home';
+import Home from './Home';
 import MainHeader from './MainHeader';
 import MainContent from './MainContent';
 import Wishlist from './MainHeader/Wishlist';
 import RequestBook from './MainContent/RequestBook';
 
 
+
 function App() {
 
   const [modal, setModal] = useState(false);
-
+  
 
 
   return (
-    <div >
       <BrowserRouter>
         <MainHeader setModal={setModal}/>
         <MainContent setModal={setModal} modal={modal}/>
@@ -52,11 +52,10 @@ function App() {
           <Route path='/sitemap' element={<Sitemap />} />
           <Route path='/wishlist' element={<Wishlist/>}/>
           <Route path='/requestbook' element={<RequestBook/>}/>
+          
         </Routes>
         <Footer />
       </BrowserRouter>
-
-    </div>
   );
 }
 
