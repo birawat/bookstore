@@ -34,7 +34,7 @@ export default function Navbar() {
 									<li><a href="blog.html" className='text-white'>Fiction Books<i className="fas fa-chevron-down"></i></a></li>
 									
                                     <li><a href="contact.html" className='text-white'>Award Winners<i className="fas fa-chevron-down"></i></a></li>
-                                    <li><a href="contact.html" className='text-white'>Featured Authors<i className="fas fa-chevron-down"></i></a></li>
+                                    <li><Link href="contact.html" className='text-white' to="/Author">Featured Authors<i className="fas fa-chevron-down"></i></Link></li>
 
                                     <li><Link href="contact.html" className='text-white' to="/requestbook">Request a Book<i className="fas fa-chevron-down"></i></Link></li>
 

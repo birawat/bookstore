@@ -21,6 +21,7 @@ import MainHeader from './MainHeader';
 import MainContent from './MainContent';
 import Wishlist from './MainHeader/Wishlist';
 import RequestBook from './MainContent/RequestBook';
+import Author from './MainContent/Author';
 
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
           <Route path='/sitemap' element={<Sitemap />} />
           <Route path='/wishlist' element={<Wishlist/>}/>
           <Route path='/requestbook' element={<RequestBook/>}/>
+          <Route path='/Author' element={<Author/>}/>
         </Routes>
         <Footer />
       </BrowserRouter>
