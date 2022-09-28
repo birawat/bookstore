@@ -1,22 +1,95 @@
 .col3 {
-  width: 150px;
-  height: 300px;
-  margin: 10px;
+  /* width: 200px; */
+  height: 390px;
+  /* margin: 10px; */
   float: left;
   overflow: hidden;
+
 }
 .card {
-  width: 150px;
-  height: 300px;
+  width: 200px;
+  height: 390px;
   overflow: hidden;
-  border: 1px solid;
+  border: none;
+  background: transparent;
+  position: relative;
+  border-radius: 20px;
+}
+.card::before{
+  content: '';
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  bottom: 5%;
+  left: 5%;
+  border-left: solid 2px;
+  border-right: solid 2px;
+  transition: 0.2s;
+  transform: scaleY(0);
+}
+.col3:hover{
+
+  color: white;
+  cursor: pointer;
+  transform: scale(1.03);
+  z-index: 8;
+  border-radius: 10px;
+  border: 1px solid black !important;
+}
+
+.card::after{
+  content: '';
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  bottom: 5%;
+  left: 5%;
+  border-top: solid 2px;
+  border-bottom: solid 2px;
+  transition: 0.2s;
+  transform: scaleX(0);
 }
 .img {
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  border-radius: 5px;
   width: 70%;
   height: 200px;
 }
 .title {
-  text-decoration-line: "underline";
+    text-decoration-line: underline;
   color: black;
+  margin-right: 20px;
+}
+.p {
+  color: black;
+  font-size: small;
+  height: 123px;
+  margin: 10px;
+  padding: 10px;
+}
+.price{
+    color: red;
+}
+.p1{
+    color: black;
+}
+.div{
+    margin: 1px;
+}
+.divimage{
+ 
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+.slick-slide > div {
+  margin: 0 10px;
+}
+.slick-list {
+  margin: 0 -10px;
+}
+.home{
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 50px;
 }
