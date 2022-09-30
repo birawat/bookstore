@@ -3,7 +3,7 @@ body {
 
   min-height: 100vh;
   font-family: "Sanchez", serif;
-  background-image: url("https://images.unsplash.com/photo-1544716278-e513176f20b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTJ8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80");
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzS2AY_6V3UZuKQ9-lirkIyLv2p-UuQY8YBA&usqp=CAU");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -94,14 +94,7 @@ p {
 	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
 	text-shadow: rgba(0,0,0,.01) 0 0 1px;
 }
-body
-{
-	font-family: 'Rubik', sans-serif;
-	font-size: 14px;
-	font-weight: 400;
-	background: #FFFFFF;
-	color: #000000;
-}
+
 div
 {
 	display: block;
