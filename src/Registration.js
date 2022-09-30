@@ -1,9 +1,8 @@
 import { React, useState, useEffect } from 'react'
+import { Link } from 'react-router-dom';
 
 const Registration = () => {
     const intialValues = { username: "", email: "", mobile: "", password: "" };
-
-   
     const [formValues, setFormValues] = useState(intialValues)
     const [formErrors, setFormErrors] = useState({})
     const [isSubmit, setIsSubmit] = useState(false)
@@ -127,6 +126,9 @@ const Registration = () => {
                         <p className="full-width">
                             <input type="submit" className="btn btn-primary mt-3 float" value="Register" />
                         </p>
+                        <p className="text-dark text-center" >Already Register? 
+                        <Link className="text-dark mt-3" to="/login">Login Here</Link></p>
+                        
                     </form>
                 </div>
 
