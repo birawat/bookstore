@@ -1,7 +1,8 @@
 import React from 'react'
 import './Cartmodal.css';
 import Stack from 'react-bootstrap/Stack';
-import { Modal, Button, CloseButton } from 'react-bootstrap'
+import { Modal, Button, CloseButton, } from 'react-bootstrap'
+import { Link } from 'react-router-dom';
 export default function Cartmodal({ setModal, modal }) {
     const initModal = () => {
         setModal(false);
@@ -9,22 +10,18 @@ export default function Cartmodal({ setModal, modal }) {
     return (
         <div >
             <Modal className="main-div" show={modal} size="lg" >            
-                <Modal.Header>
-                                
+                <Modal.Header>                                
                     <Modal.Title>
                     <Stack gap={4}>
                         <div style={{ justifyContent: "space-between", display: "flex", width: "50vw", fontSize: "20px" }}>My Shopping Cart (1 items)
-                        </div>
-                           
+                        </div>                           
                             <div style={{ justifyContent: "space-between", display: "flex", width: "50vw", fontSize: "15px" }}>
                             <span>Sr.</span>
                             <span>Item Description</span>
                             <span>Quantity</span>
-                            <span>Item Price</span>
-                            
+                            <span>Item Price</span>                            
                         </div>
-                        </Stack>
-                       
+                        </Stack>                       
                     </Modal.Title>
                     <CloseButton  onClick={initModal}/>
                 </Modal.Header>
@@ -37,11 +34,10 @@ export default function Cartmodal({ setModal, modal }) {
                
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="danger" onClick={initModal}>
-                        Place Order
-                    </Button>
+                    <Button variant="danger" onClick={initModal}><Link to="/paymentdetail" className='text-light'>Place Order</Link></Button>
+                    
                 </Modal.Footer>
             </Modal>
-        </div>
+        </div>  
     )
 }

@@ -21,6 +21,7 @@ import MainHeader from './MainHeader';
 import MainContent from './MainContent';
 import Wishlist from './MainHeader/Wishlist';
 import RequestBook from './MainContent/RequestBook';
+import PaymentDetail from './MainContent/PaymentDetail'
 
 
 function App() {
@@ -44,7 +45,7 @@ function App() {
           <Route path='/privacy' element={<Privacy />} />
           <Route path='/terms' element={<Term />} />
           <Route path='/secure' element={<Secure />} />
-          <Route path='/payment' element={<Payment />} />
+          <Route path='/payment' element={<Payment/>} />
           <Route path='/shipping' element={<Shipping />} />
           <Route path='/returns' element={<Returns />} />
           <Route path='/faq' element={<Faq />} />
@@ -52,6 +53,7 @@ function App() {
           <Route path='/sitemap' element={<Sitemap />} />
           <Route path='/wishlist' element={<Wishlist/>}/>
           <Route path='/requestbook' element={<RequestBook/>}/>
+          <Route path='/paymentdetail' element={<PaymentDetail />} />
         </Routes>
         <Footer />
       </BrowserRouter>
