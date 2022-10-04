@@ -13,7 +13,7 @@ const Home = () => {
         setMyData(response.data.items)
     }
     useEffect(() => {
-        debugger;
+       
         if(!myData){
             fetchMyAPI()
         }
