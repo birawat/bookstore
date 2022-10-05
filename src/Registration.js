@@ -26,8 +26,6 @@ const Registration = () => {
         setIsSubmit(true)
         // arrValues.push(formValues)
         setValues([...values, formValues]);
-        
-        console.log(values)
 
         localStorage.setItem('lists', JSON.stringify(values))
         setFormValues(intialValues);

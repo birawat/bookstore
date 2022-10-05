@@ -1,8 +1,8 @@
-
 {
   "name": "booksmania",
   "version": "0.1.0",
   "private": true,
+
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -11,6 +11,8 @@
     "bootstrap": "^5.2.1",
     "formik": "^2.2.9",
     "mdb-react-ui-kit": "^4.2.0",
+    "mongodb": "^4.10.0",
+    "mongoose": "^6.6.4",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
     "react-dom": "^18.2.0",
