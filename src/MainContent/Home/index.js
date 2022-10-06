@@ -12,7 +12,7 @@ const Home = () => {
 
   const apiData = AllApi();
 
-
+console.log(apiData)
 
 
   //    const [myData, setMyData] = useState()
@@ -77,8 +77,7 @@ const Home = () => {
       <h2> <span id="ctl00_phBody_NewArrival_lblHeaderTitle">Now Trending</span> </h2>
       <Slider {...settings}>
         {
-          apiData[0].data.map((post) => {
-
+          apiData[0]?.data.map((post) => {
             return (
               <div>
                 <div className="col-3 col3 w-100 m-3 ">

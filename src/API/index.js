@@ -19,12 +19,12 @@ resp.send(data)
 })
 app.post("/createNewBook",async(req,resp)=>{
     let data = await dbConnection()
-    let response = await data.insertOne({
-            "_id": "633b148247d8c165bc16886d",
-            "name": "How to Read a Books",
-            "imageLinks": "http://books.google.com/books/content?id=3QOZBAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-            "price": "250$",
-            "description": "Analyzes the art of reading",
+    let response = await data.insert({
+            "_id": "633b148247d8c165bc16886f",
+            "name": "Popular Mechanics",
+            "imageLinks": "http://books.google.com/books/content?id=RdMDAAAAMBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "price": "150$",
+            "description": "Popular Mechanics inspires",
             "isAvailable": "false"
         })  
    // let result = await response.save();
