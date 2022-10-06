@@ -1,7 +1,7 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel';
 import Sdata from './Sdata';
-const Slider = () => {
+const Sliders = () => {
  
     return (
         <div>
@@ -25,4 +25,4 @@ const Slider = () => {
         </div>    )
 }
 
-export default Slider
+export default Sliders
