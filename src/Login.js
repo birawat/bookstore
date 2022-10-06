@@ -1,4 +1,5 @@
 import { React, useState, useEffect } from 'react'
+import { Link } from 'react-router-dom';
 
 export const Login = () => {
 
@@ -60,7 +61,7 @@ export const Login = () => {
         <div className=' d-flex justify-content-center mt-35'>
        
        
-            <div className="border w-25">
+            <div className="border w-25 mt-5">
                 <div className="form">
                     <h2 className='floatheading'><b>Login</b></h2>
 
@@ -87,7 +88,10 @@ export const Login = () => {
                         <p className="full-width">
                             <input type="submit" className="btn btn-primary mt-3 float" value="Login" />
                         </p>
+                        <p className="text-dark float-end" >New To BooksMania?
+                        <Link className="text-dark mt-3" to="/Registration">Register Here</Link></p>
                       {user.length===0? "":<h4> welcome:{user}</h4>}
+                    
                     </form>
                 </div>
                 
