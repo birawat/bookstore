@@ -19,7 +19,7 @@ const Footer = () => {
                         return (
                             <div className="row py-3 flex-child " style={{ justifyContent: 'center' }}>
                                 <div className="col-lg-2 col-md-6 mb-4 mb-lg-0 flex-child" >
-                                    <h6 className="text-uppercase font-weight-bold mb-4" style={{ color: 'red' }}>{val.heading}</h6>
+                                    <h6 className="text-uppercase font-weight-bold mb-4 heading">{val.heading}</h6>
                                     <ul className="list-unstyled mb-0">
                                         <li className="mb-2">
                                         {val.urlArray.map((value)=>{return(

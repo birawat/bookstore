@@ -13,7 +13,7 @@ export const HomeNavbar = () => {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
                             {HomeNavData.map((value) => {
-                                console.log("--------------------",value)
+                                
                                 return (
                                     <Nav.Link href="#home" style={{ fontSize: '18px', marginRight: '100px' }}>
                                         <img src={value.imgsrc} width="61px" height="61px" alt={value.alt} />
