@@ -1,80 +1,11 @@
-.contain {
-    max-width: 1170px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1em;
-  }
-  
-  
-  .contact-wrapper {
-    margin: auto 0;
-  }
-  
-  .submit-btn {
-    float: left;
-  }
-  
- 
-  
-  .highlight-text {
-    color: #ec1c24;
-  }
-  
-  .hightlight-contact-info {
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 1.5;
-  }
-  
-  .highlight-text-grey {
-    font-weight: 500;
-  }
-  
-  .email-info {
-      margin-top: 20px;
-  }
-  
-  ::-webkit-input-placeholder { /* Chrome */
-    font-family: 'Roboto', sans-serif;
-  }
-  
-  .required-input {
-    color: black;
-  }
- 
-  
-  
-  .form-input:focus,
-  textarea:focus{
-    outline: 1.5px solid #ec1c24;
-  }
-  
-  .form-input,
-  textarea {
-    width: 100%;
-    border: 1px solid #bdbdbd;
-    border-radius: 5px;
-  }
-  
-  .wrapper > * {
-    padding: 1em;
-  }
-  @media (min-width: 700px) {
-    .wrapper {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-    }
-    .wrapper > * {
-      padding: 2em 2em;
-    }
-  }
-  
-  .ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .contacts {
-    color: #212d31;
+.col-md-9{
+		background: #fff;
+		padding: 3%;
+	}
+	.contact-form label{
+		font-weight:600;
+	}
+
+  .check{
+    color: red;
   }
