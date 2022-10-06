@@ -16,7 +16,7 @@ import Returns from './MainContent/Returns';
 import Faq from './MainContent/Faq';
 import Affiliate from './MainContent/Affiliate';
 import Sitemap from './MainContent/Sitemap';
-import Home from './Home';
+import Home from './MainContent/Home';
 import MainHeader from './MainHeader';
 import MainContent from './MainContent';
 import Wishlist from './MainHeader/Wishlist';
@@ -27,39 +27,32 @@ import Author from './MainContent/Author';
 
 
 function App() {
-
   const [modal, setModal] = useState(false);
-  
-
-
-  return (
+  return (  
       <BrowserRouter>
         <MainHeader setModal={setModal}/>
-        <MainContent setModal={setModal} modal={modal}/>
-        
+        <MainContent setModal={setModal} modal={modal}/>        
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path='/career' element={<Career />} />
-          <Route path='/blog' element={<Blog />} />
-          <Route path='/privacy' element={<Privacy />} />
-          <Route path='/terms' element={<Term />} />
-          <Route path='/secure' element={<Secure />} />
-          <Route path='/payment' element={<Payment/>} />
-          <Route path='/shipping' element={<Shipping />} />
-          <Route path='/returns' element={<Returns />} />
-          <Route path='/faq' element={<Faq />} />
-          <Route path='/affiliate' element={<Affiliate />} />
-          <Route path='/sitemap' element={<Sitemap />} />
+          <Route path='/' element={<Home/>}/>
+          <Route path='/about' element={<About/>}/>
+          <Route path='/contact' element={<Contact/>}/>
+          <Route path='/career' element={<Career/>}/>
+          <Route path='/blog' element={<Blog/>}/>
+          <Route path='/privacy' element={<Privacy/>}/>
+          <Route path='/terms' element={<Term/>}/>
+          <Route path='/secure' element={<Secure/>}/>
+          <Route path='/payment' element={<Payment/>}/>
+          <Route path='/shipping' element={<Shipping/>}/>
+          <Route path='/returns' element={<Returns/>}/>
+          <Route path='/faq' element={<Faq/>}/>
+          <Route path='/affiliate' element={<Affiliate/>}/>
+          <Route path='/sitemap' element={<Sitemap/>}/>
           <Route path='/wishlist' element={<Wishlist/>}/>
           <Route path='/requestbook' element={<RequestBook/>}/>
-          <Route path='/paymentdetail' element={<PaymentDetail />} />
           <Route path='/Author' element={<Author/>}/>
         </Routes>
-        <Footer />
-      </BrowserRouter>
+        <Footer/>
+      </BrowserRouter>  
   );
 }
-
 export default App;

@@ -21,10 +21,16 @@ export const Login = () => {
         
         let list = JSON.parse(localStorage.getItem('lists'))
         
-     
+        // list.map((post)=>{
+        //     formValues.email===post.email||post.username&&formValues.password===post.password?
+        //     console.log("true"):
+        //     console.log("false")
+
+        // })
         let check = list.filter((post)=>
         formValues.email==post.email||post.username&&formValues.password==post.password)
-      
+        console.log(check[0].username)
+    
        setUser(check[0].username)
      
     }
@@ -58,8 +64,7 @@ export const Login = () => {
 
     return (
         
-        <div className=' d-flex justify-content-center mt-35'>
-       
+        <div className=' d-flex justify-content-center mt-35'>     
        
             <div className="border w-25 mt-5">
                 <div className="form">
