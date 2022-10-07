@@ -19,31 +19,33 @@ const Home = () => {
     }, [myData])
     return (
         <div >
-            <Slider />
-            <HomeNavbar />
-            <div className="container-fluid flex-grow-1 ">
-                <div className="row py-5">
-                    <div className="col-lg-12  text-white text-center">
-                        {
-                            myData?.map((post, index) => {
-                                return (
-                                    <>
-                                        <div key={index}>
-                                            <div className="col-3 " class='col3'>
-                                                <div className="card" >
-                                                    <div style={{ marginTop: '10px' }}>
-                                                        <img className="card-img-top" src={post.volumeInfo.imageLinks.thumbnail} alt="..." class='img' />
-                                                    </div>
-                                                    <div className="card-body">
-                                                        <h5 className="card-title" class='title'>{post.volumeInfo.title}</h5>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </>
-                                )
-                            })
-                        }
+        <Slider/>
+        <HomeNavbar/>
+        <div className="container-fluid flex-grow-1 ">
+        <div className="row py-5">
+          <div className="col-lg-12  text-white text-center">
+          
+            {
+                myData?.map((post, index) => {
+                    return (
+                        <>
+                        <div key={index}>
+                        <div  className="col-3 " class='col3'>
+                        <div className="card" >
+                        <div style={{ marginTop: '10px'}}>
+                            <img className="card-img-top" src={post.volumeInfo.imageLinks.thumbnail} alt="..."
+                                class='img'/></div>
+                                <div className="card-body">
+                                    <h5 className="card-title" class='title'>{post.volumeInfo.title}</h5>
+                                    <p>vishal</p>
+                                </div>
+                            </div>
+                            </div>
+                            </div>
+                            </>
+                            )
+                })
+            }
 
                     </div>
                 </div>
