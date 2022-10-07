@@ -21,6 +21,9 @@ import MainHeader from './MainHeader';
 import MainContent from './MainContent';
 import Wishlist from './MainHeader/Wishlist';
 import RequestBook from './MainContent/RequestBook';
+import { Login } from './Login';
+import Registration from './Registration';
+import Seller from './MainContent/Seller';
 
 
 
@@ -52,7 +55,9 @@ function App() {
           <Route path='/sitemap' element={<Sitemap />} />
           <Route path='/wishlist' element={<Wishlist/>}/>
           <Route path='/requestbook' element={<RequestBook/>}/>
-          
+          <Route path='/login' element={<Login/>}/> 
+          <Route path='/Registration' element={<Registration/>} /> 
+          <Route path='/seller' element={<Seller/>}/>           
         </Routes>
         <Footer />
       </BrowserRouter>
