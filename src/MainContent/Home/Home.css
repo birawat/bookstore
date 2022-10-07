@@ -1,14 +1,11 @@
-.col3 {
-  /* width: 200px; */
-  height: 390px;
-  /* margin: 10px; */
+.col3 { 
+  height: 470px;  
   float: left;
   overflow: hidden;
 
 }
 .card {
-  width: 200px;
-  height: 390px;
+  height: 470px;
   overflow: hidden;
   border: none;
   background: transparent;
@@ -52,8 +49,9 @@
 .img {
   /* border: 1px solid black; */
   border-radius: 5px;
-  width: 70%;
+  width: 130px;
   height: 200px;
+  margin-left: 40px;
 }
 .title {
     text-decoration-line: underline;
@@ -76,14 +74,9 @@
 .div{
     margin: 1px;
 }
-.divimage{
- 
-  margin-right: 40px;
-  margin-left: 40px;
-}
-
 .slick-slide > div {
   margin: 0 10px;
+  width:250px;
 }
 .slick-list {
   margin: 0 -10px;

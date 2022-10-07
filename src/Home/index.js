@@ -39,6 +39,7 @@ const Home = () => {
                                 class='img'/></div>
                                 <div className="card-body">
                                     <h5 className="card-title" class='title'>{post.volumeInfo.title}</h5>
+                                    <p>vishal</p>
                                 </div>
                             </div>
                             </div>

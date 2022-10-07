@@ -79,21 +79,24 @@ const Home = () => {
                 apiData[0]?.data.items.map((post) => {
               
                   return (
-                    <div>
-                      <div className="col-3 col3 w-100 m-3 ">
-                        <div className="card" >
+                       <div className=" m-3 mainborder card " >
+                        
                           <div className='divimage mt-2'>
-                            <img className="img card-img-top " src={post.volumeInfo.imageLinks ? post.volumeInfo.imageLinks.thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"} alt="..."
-                           /></div>
-                          <div className="card-body">
+                            <img className="img card-img-top"src={post.volumeInfo.imageLinks ? post.volumeInfo.imageLinks.thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"} alt="..."
+                           />
+                           </div>
+                            <div className="card-body" >
                             <h5 className="card-title title"><b>{post.volumeInfo.title.length>=20 ? post.volumeInfo.title.substring(0,20)+"...":post.volumeInfo.title}</b></h5>
-                            <p className='p1'><b>{post.volumeInfo.publishedDate}</b></p>
+                            <p className='p1 mt-4'><b>{post.volumeInfo.publishedDate}</b></p>
                             <p className='p1'><b>{post.volumeInfo.printType}</b></p>
-                            <div className='div'><b><h5 className='price'>₹518</h5></b></div>
+                            <div className='div'><b><h5 className='price'>₹699</h5></b>
+                            <button className="round-black-btn small-btn text-size-sm">Add Cart</button>
+                            <button className="round-red-btn small-btn mt-2">Remove</button>
+                            </div>
+                            
                           </div>
-                        </div>
-                      </div>
-                    </div>
+                        </div>                   
+                    
                   )
                 })
               }
