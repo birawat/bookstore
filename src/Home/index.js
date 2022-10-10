@@ -1,7 +1,6 @@
 import React from 'react'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
-import './Home.css'
 import Slider from '../Slider'
 import { HomeNavbar } from '../HomeNavbar'
 const Home = () => {

@@ -2,56 +2,41 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 export default function Navbar() {
-  return (
-    <div>
-      <nav className="main_nav" style={{backgroundColor:"darkblue"}}>
-			<div className="container">
-				<div className="row">
-					<div className="col">
-                        <div className="main_nav_content d-flex flex-row">
-                            <div className="main_nav_menu">
-								
-								<ul className="standard_dropdown main_nav_dropdown" >
-								
-									<li><Link href="#" id="books" className='text-white' to="/">Books<i className="fas fa-chevron-down"></i></Link></li>
-									
-									<li className="hassubs">
-										<a href="#" id="newArrivals" className='text-white'>New Arrivals<i className="fas fa-chevron-down"></i></a>
-										<ul>
-										
-											
-											
-										</ul>
-									</li>
-									<li className="hassubs">
-										<a href="#" className='text-white'>Box Sets<i className="fas fa-chevron-down"></i></a>
-										
-									</li>
-									<li className="hassubs">
-										<a href="#" className='text-white'>Best sellers<i className="fas fa-chevron-down"></i></a>
-										
-									</li>
-									<li><a href="blog.html" className='text-white'>Fiction Books<i className="fas fa-chevron-down"></i></a></li>
-									
-                                    <li><a href="contact.html" className='text-white'>Award Winners<i className="fas fa-chevron-down"></i></a></li>
-                                    <li><Link href="contact.html" className='text-white' to="/Author">Featured Authors<i className="fas fa-chevron-down"></i></Link></li>
+	return (
+		<div>
+			<nav className="main_nav" style={{ backgroundColor: "darkblue" }}>
+				<div className="container">
+					<div className="row">
+						<div className="col">
+							<div className="main_nav_content d-flex flex-row">
+								<div className="main_nav_menu" >
+									<ul className="standard_dropdown main_nav_dropdown" >
+										<li >
+											<Link href="#" id="books" className='text-white' to="/">Books</Link>
+										</li>
+										<li className="hassubs">
+											<a href="#" id="newArrivals" className='text-white'>New Arrivals</a>
+										</li>
+										<li className="hassubs">
+											<a href="#" className='text-white'>Box Sets</a>
+										</li>
+										<li className="hassubs">
+											<a href="#" className='text-white'>Best sellers</a>
 
 										</li>
 										<li><a href="blog.html" className='text-white'>Fiction Books</a></li>
 
 										<li><a href="contact.html" className='text-white'>Award Winners</a></li>
 										<li><a href="contact.html" className='text-white'>Featured Authors</a></li>
-										
 										<li>
 											<Link href="contact.html" className='text-white' to="/requestbook">Request a Book</Link>
-										</li>	
-																										
+										</li>
+										<li><Link href="contact.html" className='text-white'to="/seller">Seller</Link></li>
 									</ul>
-									
 								</div>
-								<div style={{marginLeft:"auto", fontSize:"40px"}}>
-										<Link href="contact.html" className='fa fa-user-circle-o text-light' to="/login"></Link>
-									</div>
+								<div style={{ marginLeft: "auto", fontSize: "40px" }}>
+									<Link href="contact.html" className='fa fa-user-circle-o text-light' to="/login"></Link>									
+								</div>
 								<div className="menu_trigger_container ml-auto">
 									<div className="menu_trigger d-flex flex-row align-items-center justify-content-end">
 										<div className="menu_burger">
