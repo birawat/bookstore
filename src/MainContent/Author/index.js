@@ -1,7 +1,7 @@
 import React from 'react'
 import AuthorData from './AuthorData'
 
-export default function Authors() {
+export default function Author() {
     return (
         <div className="atrImg float-start row p-4">
             {AuthorData.map((data) => {

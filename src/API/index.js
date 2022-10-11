@@ -20,12 +20,13 @@ resp.send(data)
 app.post("/createNewBook",async(req,resp)=>{
     let data = await dbConnection()
     let response = await data.insert({
-            "_id": "633b148247d8c165bc16886f",
-            "name": "Popular Mechanics",
-            "imageLinks": "http://books.google.com/books/content?id=RdMDAAAAMBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-            "price": "150$",
-            "description": "Popular Mechanics inspires",
-            "isAvailable": "false"
+            "_id": "633b148247d8c165bc16887f",
+            "name": "Billboard",
+            "imageLinks": "http://books.google.com/books/content?id=pBQEAAAAMBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "price": "250$",
+            "description": "Billboard remains the world's premier weekly music publication",
+            "category": "NewArrivals",
+            "isAvailable": "true"
         })  
    // let result = await response.save();
     resp.send(response)

@@ -4,7 +4,7 @@ export default function PaymentDetail() {
     return (
         <div className="row mt-4" style={{ marginRight: "150px" }}>
             <div className="col-md-8 mb-4" >
-                <div className="card mb-4 w-75 h-100 border float-end" >
+                <div className="card mb-4 w-75 h-100 border float-end bg-light" >
                     <div className="card-header">
                         <h5 className="mb-0">Biling details</h5>
                     </div>
@@ -45,7 +45,7 @@ export default function PaymentDetail() {
                                 <label className="form-label" for="form7Example7">Additional information</label>
                             </div>
                             <div className="form-check d-flex justify-content-center mb-2">
-                                <input className="form-check-input me-2" type="checkbox" value="" id="form7Example8" checked />
+                               
                                 <label className="form-check-label" for="form7Example8">
                                     Create an account?
                                 </label>
@@ -55,7 +55,7 @@ export default function PaymentDetail() {
                 </div>
             </div>
             <div className="col-md-4 mb-4" >
-                <div className="card mb-4 w-75 h-auto border">
+                <div className="card mb-4 w-75 h-auto border bg-light">
                     <div className="card-header py-3">
                         <h5 className="mb-0">Summary</h5>
                     </div>
@@ -63,11 +63,11 @@ export default function PaymentDetail() {
                         <ul className="list-group list-group-flush">
                             <li className="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
                                 Products
-                                <span>$53.98</span>
+                                <span>$60</span>
                             </li>
                             <li className="list-group-item d-flex justify-content-between align-items-center px-0">
                                 Shipping
-                                <span>Gratis</span>
+                                <span>$3</span>
                             </li>
                             <li className="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
                                 <div>
@@ -76,7 +76,7 @@ export default function PaymentDetail() {
                                         <p className="mb-0">(including VAT)</p>
                                     </strong>
                                 </div>
-                                <span><strong>$53.98</strong></span>
+                                <span><strong>$63</strong></span>
                             </li>
                         </ul>
 

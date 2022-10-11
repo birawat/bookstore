@@ -66,7 +66,7 @@ export const Login = () => {
         
         <div className=' d-flex justify-content-center mt-35'>     
        
-            <div className="border w-25 mt-5">
+            <div className="border w-25 mt-5 bg-light">
                 <div className="form">
                     <h2 className='floatheading'><b>Login</b></h2>
 
