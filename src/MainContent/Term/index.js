@@ -2,9 +2,9 @@ import React from 'react'
 
 const Term = () => {
   return (
-    <div>
+    <div style={{marginLeft:"5%", marginTop : "2%"}}>
       <h4>Terms Of Use</h4>
-      <p>You are welcome to Bookswagon.com. You can avail the services offered here or through its affiliates, but prior to that you need to agree to the terms and conditions. If you browse our site or visit our shop, you have to accept these conditions.</p>
+      <p>You are welcome to BooksMania.com. You can avail the services offered here or through its affiliates, but prior to that you need to agree to the terms and conditions. If you browse our site or visit our shop, you have to accept these conditions.</p>
       <p>Make sure that you have read the terms and conditions properly. While availing current or future services that are offered by the site or its affiliates, you will abide by these conditions and guidelines that are applicable.</p>
       <h5>The Privacy Policy</h5>
       <p>Make sure that you thorough review the privacy policy that governs the visit to our site. You shall understand our practices properly.</p>
@@ -22,7 +22,7 @@ const Term = () => {
     <p>If you return any product, we will accept if it is damaged during shipping or it defective. We will also accept the return, if the product is wrongly delivered to you or the packing is incomplete. However, we should be informed about the discrepancies within 72 hours from the delivery date of the product. At the same time, the products should also be returned in the original condition.</p>
     <h5>The replacement conditions</h5>
 <p>We offer you a guarantee of 14 days replacement for the products that we have sold in the site adhering to certain conditions that are mentioned. The customers will have to notify us about the defect or the damage within 72 hours from the receipt of the products. In case, if the customer fails to inform us within the due date, we reserve the right to reject or accept the request. We can replace the defective product with a brand new one without charging any extra amount.
-Bookswagon will also make efforts to replace the specific product that has been ordered. However, we have the right to give an alternate product, if the specified product is out of stock</p>
+BooksMania will also make efforts to replace the specific product that has been ordered. However, we have the right to give an alternate product, if the specified product is out of stock</p>
 <p>However, the replacement guarantee is valid only if the defect is from the manufacturer or if damages are due to the transport. We will consider the damage as invalid if it is due to normal tearing and wearing or if there has been any kind of negligence on part of the customer. If our customers come across any such issues with any product, they should contact with the customer service within 72 hours. Failing this, we might decide to deny the request for replacement.</p>
 <p>On the other hand, availing digital contents like e books are not returnable.</p>
 <h5>Policy of Change and Cancellation</h5>
@@ -41,25 +41,26 @@ Children: No products are sold for children and these are sold only to the adult
 <h5>Reviews, Comments, Communications</h5>
 <p>The content: The visitors might post comments, reviews and other contents along with sending e cards. They can also submit different ideas, suggestions, questions or any other kinds of information till the time that the content is not obscene, illegal, defamatory, threatening or infringing the rights of intellectual property to the third part. It should not contain software virus, commercial solicitation, political campaigning or mass mailing.
 Wrong information: You cannot use false email address or cannot impersonate anyone which can mislead the original or a content or card. In such a case, we reserve the right to edit or remove the content and will not review posted contents regularly.
-The Rights: If you submit material or post contents with a different intention, you can grant us and our affiliates a royalty free and non-exclusive perpetual and sub-licensed right to use the material. We can modify, reproduce, publish, adapt and create derivative work throughout the world. You also give Bookswagon.com and the other affiliate sites the sub license for using the name that you have submitted in connection with the content.
+The Rights: If you submit material or post contents with a different intention, you can grant us and our affiliates a royalty free and non-exclusive perpetual and sub-licensed right to use the material. We can modify, reproduce, publish, adapt and create derivative work throughout the world. You also give BooksMania.com and the other affiliate sites the sub license for using the name that you have submitted in connection with the content.
 Owning Rights: You can represent all the rights or control the right for the content that you have posted and the content is accurate. You can also use it for supplying but not violating the policy, so that it does not cause any injury to any entity. You will also accept for indemnification of the affiliate for the claims that will result in the supply of the content. The site has the right to obligate or edit or even remove the activity of the content. It takes no responsibility for liability of any content that you have posted.</p>
 <h5>The Risk of Loss</h5>
 <p>The items that you have purchased from this site are adhered to the contract of shipment. Thus, the title and the risk of loss pass to you as soon as the product is delivered.</p>
 <h5>Description of Product</h5>
-<p>Bookswagon.com and the affiliates try to be as much accurate. However, there are no warranties that description of the product or the content is accurate or reliable or complete. The product offered by it is also not described and therefore the only remedy is to return the product in the most useful condition.</p>
+<p>BooksMania.com and the affiliates try to be as much accurate. However, there are no warranties that description of the product or the content is accurate or reliable or complete. The product offered by it is also not described and therefore the only remedy is to return the product in the most useful condition.</p>
 <h5>Policies of the Site, Modification, and Severability</h5>
 <p>You should review our other policies, as well. We have the right to make any change in our websites, the terms and conditions and the policies any time. If these conditions are invalid, unenforceable or void for any reason, the condition can be deemed as severable. It will also not create any affect on the validity or enforceability of other conditions.</p>
 <h5>Rights of Intellectual Property</h5>
-<p>Copyright: All the contents like graphics, texts, button icons, logos, digital downloads, audio clips is the property of Bookswagon.com and is completely protected by Indian law of Copyright. The content is also the exclusive property of the site including the software in use.</p>
+<p>Copyright: All the contents like graphics, texts, button icons, logos, digital downloads, audio clips is the property of BooksMania.com and is completely protected by Indian law of Copyright. The content is also the exclusive property of the site including the software in use.</p>
 Trademarks:
-Protected Marks: The protected marks include Bookswagon.com & design and other things that are in the website.
 
-Protected Graphics: The graphics, page headers, logos, icons, scripts are trademarks of the site. These trademarks and trade dress might not be used in relation to products and services that are not of the company. All the other trademarks are owned by the company and its affiliate sites. These are the property of different owners. They might not be connected to or affiliated with Bookswagon.com.
+Protected Marks: The protected marks include BooksMania.com & design and other things that are in the website.
+
+Protected Graphics: The graphics, page headers, logos, icons, scripts are trademarks of the site. These trademarks and trade dress might not be used in relation to products and services that are not of the company. All the other trademarks are owned by the company and its affiliate sites. These are the property of different owners. They might not be connected to or affiliated with BooksMania.com.
 <h5>The Law and Jurisdiction</h5>
 <p>The above mentioned terms and conditions will be in use in accordance with the Indian laws. If there are matters of disputed from it related to the terms and conditions of the website, the competent Courts at Ahmedabad, Gujarat will have the complete jurisdiction for the matter and all the other courts will be excluded.</p>
 <h5>Disclaimer of warranties and Limitation of Liability</h5>
-<p>The complete site is provided by Bookswagon.com on the basis of as is and as available. The company does not represent or warrantee any kind of operations. It also does not express or implies the information on the site or the operation along with the additional materials, contents or products that are part of this site. It is you as a customer who agrees that the use of this site is solely at your own risk.</p>
-<p>As applicable by law, Bookswagon.com disclaims all the warrantees to the full extent. It also disclaims the expression or implication that are not limited to but implied with the warrantees of merchantability as well as fitness. These conditions are stated for a special purpose. The site also does not warrantee that the total site, the servers, the emails sent are completely free of any harmful components or viruses. However, the site will not take the liability of any damages that arises from the usage of the site that also includes any kind if incidental, direct, indirect or kinds of consequential damages, as a whole.</p>
+<p>The complete site is provided by BooksMania.com on the basis of as is and as available. The company does not represent or warrantee any kind of operations. It also does not express or implies the information on the site or the operation along with the additional materials, contents or products that are part of this site. It is you as a customer who agrees that the use of this site is solely at your own risk.</p>
+<p>As applicable by law, BooksMania.com disclaims all the warrantees to the full extent. It also disclaims the expression or implication that are not limited to but implied with the warrantees of merchantability as well as fitness. These conditions are stated for a special purpose. The site also does not warrantee that the total site, the servers, the emails sent are completely free of any harmful components or viruses. However, the site will not take the liability of any damages that arises from the usage of the site that also includes any kind if incidental, direct, indirect or kinds of consequential damages, as a whole.</p>
 
 
 </div>
