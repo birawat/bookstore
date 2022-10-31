@@ -6,9 +6,9 @@ import { HomeNavbar } from '../HomeNavbar'
 const Home = () => {
     const [myData, setMyData] = useState([])
     async function fetchMyAPI() {
-        console.log("fetchapi")
+      
         const response = await axios.get("https://www.googleapis.com/books/v1/volumes?q=Books")
-        console.log(response.data.items)
+      
         setMyData(response.data.items)
     }
     useEffect(() => {

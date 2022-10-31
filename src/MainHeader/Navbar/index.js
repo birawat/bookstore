@@ -27,7 +27,7 @@ export default function Navbar() {
 										<li><a href="blog.html" className='text-white'>Fiction Books</a></li>
 
 										<li><a href="contact.html" className='text-white'>Award Winners</a></li>
-										<li><a href="contact.html" className='text-white' to="/author">Featured Authors</a></li>
+										<li><Link href="contact.html" className='text-white' to="/author">Featured Authors</Link></li>
 										<li>
 											<Link href="contact.html" className='text-white' to="/requestbook">Request a Book</Link>
 										</li>

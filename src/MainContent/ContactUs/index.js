@@ -17,9 +17,9 @@ export default function Contact() {
 
     };
     useEffect(() => {
-        console.log(formerror);
+      
         if (Object.keys(formerror).length === 0 && isSubmit) {
-            console.log(formValue);
+     
         }
     }, [formerror])
     const validate = (values) => {

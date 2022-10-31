@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function CartIcon({ setModal, cartValue}) {
   let length = cartValue.length? cartValue.length :0;
-  console.log(".....",length)
+
   return (
     <div>
       <div className="cart">
