@@ -26,8 +26,7 @@ export default function Header({ setModal, cartValue}) {
 							</div>
 						</div>
 					</div>
-				</div>
-			
+				</div>			
 				</header>
 			</div>
 		</div>

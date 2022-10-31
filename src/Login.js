@@ -8,6 +8,7 @@ export const Login = () => {
     const [formErrors, setFormErrors] = useState({})
     const [isSubmit, setIsSubmit] = useState(false)
     const [user,setUser] = useState("")
+    
     const onHandleChange = (e) => {
         const { name, value } = e.target;
         setFormValues({ ...formValues, [name]: value })
@@ -18,19 +19,17 @@ export const Login = () => {
         e.preventDefault();
         setFormErrors(validate(formValues)) 
         setIsSubmit(true)
-        
+
         let list = JSON.parse(localStorage.getItem('lists'))
         
         // list.map((post)=>{
         //     formValues.email===post.email||post.username&&formValues.password===post.password?
-        //     console.log("true"):
-        //     console.log("false")
+      
 
         // })
         let check = list.filter((post)=>
-        formValues.email==post.email||post.username&&formValues.password==post.password)
-        console.log(check[0].username)
-    
+        formValues.email===post.email||post.username&&formValues.password===post.password)
+       
        setUser(check[0].username)
      
     }
@@ -95,7 +94,7 @@ export const Login = () => {
                         </p>
                         <p className="text-dark float-end" >New To BooksMania?
                         <Link className="text-dark mt-3" to="/Registration">Register Here</Link></p>
-                      {user.length===0? "":<h4> welcome:{user}</h4>}
+                      {user.length===0? "":<h4> <center>Welcome:{user}</center></h4>}
                     
                     </form>
                 </div>

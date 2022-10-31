@@ -5,7 +5,7 @@ import { Modal, Button, CloseButton, } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
 export default function Cartmodal({ setModal, modal, cartValue }) {
 
-    console.log("carValue", cartValue);
+   
 
     const initModal = () => {
         setModal(false)
@@ -28,20 +28,18 @@ export default function Cartmodal({ setModal, modal, cartValue }) {
                     </Modal.Title>
                     <CloseButton onClick={() => setModal(false)} />
                 </Modal.Header>
-                {cartValue?.map((post, index) => {
-                    debugger
-                    console.log(post)
+                {cartValue?.map((post, index) => {                    
+                  
                     return (
                         <Modal.Body>
                             <div className="col">
                                 <div className="card h-25">
                                     <div className="card-body">
                                         <div className="row">
-
                                             <div className="d-flex justify-content-between">
                                                 <div class="d-flex flex-row align-items-center">
                                                     <div>
-                                                        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp"
+                                                        <img src={post.imageLinks ? post.imageLinks : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.pn"} 
                                                             className="img-fluid rounded-3" alt="Shopping item" style={{ width: "65px" }} />
                                                     </div>
                                                     <div>

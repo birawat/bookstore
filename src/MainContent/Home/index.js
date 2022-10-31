@@ -1,4 +1,4 @@
-import {React} from 'react'
+import {React, useState} from 'react'
 import './Home.css'
 import Sliders from '../../Sliders'
 import { HomeNavbar } from '../../HomeNavbar'
@@ -6,14 +6,14 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { AllApi } from '../../AllApi'
+import App from '../../App';
 
-
-const Home = ({cartValue, setCartValue}) => {
-
-
+const Home = ({cartValue, setCartValue, cartValues}) => {
+  const [key,setKey] = useState(false)
+  const [buttontext, setButtontext] = useState("Add Cart");
   const apiData = AllApi();
 
-console.log(apiData)
+
 
 
   //    const [myData, setMyData] = useState()
@@ -67,10 +67,7 @@ console.log(apiData)
       }
     ]
   };
-
-
-
-  return (
+return (
 
     <div className='home'>
       <Sliders />
@@ -81,6 +78,9 @@ console.log(apiData)
       <Slider {...settings}>
         {
           apiData[0]?.data.map((post,index) => {
+          //   post.key=false
+          //  let val = post.key;
+          
             return (
               <div className=" m-3 mainborder card ">
                 <div className='divimage mt-2'>
@@ -92,14 +92,16 @@ console.log(apiData)
                     <p className='p1'><b>$30</b></p>
                     <p className='p1'><b>{post.category}</b></p>
                       <div className='div'><b><h5 className='price'>{post.isAvailable}</h5></b>
-                      <button className="round-black-btn small-btn text-size-sm" onClick={() => {
-                        console.log(post)
-                        setCartValue([...cartValue,{post}])
-                        // card.push(post)
-                        console.log("==",cartValue)
+                      <button className="round-black-btn small-btn text-size-sm" id={index} onClick={(e) => {
                         
-                      }}>Add Cart</button>
-                      <button className="round-red-btn small-btn mt-2">Add Wishlist</button>
+              
+                        setCartValue([...cartValue,{post}])                    
+                        
+                        index===e.target.id ?setButtontext("Added to cart")
+                         : setButtontext("Add cart")                
+                      }}>{buttontext}</button>
+                      
+                      <button className="round-red-btn small-btn mt-2" >Add Wishlist</button>
                       </div>
                     </div>
                   </div>
@@ -112,10 +114,6 @@ console.log(apiData)
       <hr />
   
     </div>
-
-      
-
-    )
+  )
 }
-
 export default Home

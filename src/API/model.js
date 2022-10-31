@@ -6,13 +6,32 @@ const mongoose  = require('mongoose');
 const BookSchema = new mongoose.Schema({
     //_id:mongo.Schema.Types.ObjectId,
     // _id:mongo.Schema.Types.ObjectId(),
-    _id:Number,
-    name:String,
-    imageLinks:String,
-    price:Number,
-    description:String,
-    isAvailable:Boolean,
-    category:String
+    
+    name:{
+        type:String,
+     
+        },
+    imageLinks:{
+        type:String,
+       
+        },
+    price:{
+        type:String,
+     
+        },
+    description:{
+        type:String,
+       
+        },
+    isAvailable:{
+        type:Boolean,
+    
+        },
+    category:{
+        type:String,
+     
+        },
 })
 
-module.exports = mongoose.model('Books',BookSchema)
+const AllBooks= mongoose.model('AllBooks',BookSchema)
+module.exports = AllBooks;
