@@ -6,44 +6,31 @@ const Registration = () => {
     const [formValues, setFormValues] = useState(intialValues)
     const [formErrors, setFormErrors] = useState({})
     const [isSubmit, setIsSubmit] = useState(false)
-    const [values, setValues] = useState([])
-
-    let name, value;
-
-
-    const onHandleChange = (e) => {
-        //const { name, value } = e.target;
-        name = e.target.name;
-        value = e.target.value;
+    // const [values, setValues] = useState([])
+     const onHandleChange = (e) => {
+        const { name, value } = e.target;    
         setFormValues({ ...formValues, [name]: value })
-
     }
-
     const handleSubmit = (e) => {
         e.preventDefault();
         setFormErrors(validate(formValues))
         setIsSubmit(true)
-        // arrValues.push(formValues)
-        setValues([...values, formValues]);
-
-        localStorage.setItem('lists', JSON.stringify(values))
-        setFormValues(intialValues);
-        console.log("successfully registration")
-
+        // setValues([...values, formValues]);
+        // localStorage.setItem('lists', JSON.stringify(values))
+        // setFormValues(intialValues);
+        // console.log("successfully registration")
     }
-
     useEffect(() => {
-
+            console.log(formErrors)
         if (Object.keys(formErrors.length === 0 && isSubmit)) {
             console.log(formValues);
         }
     }, [formErrors])
-
     const validate = (values) => {
         const error = {};
         const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
         if (!values.username) {
-            error.username = "Username is required";
+            error.username = "Username is required*";
         } else if (values.username.length < 4) {
             error.username = "Name must be more than 4 characters";
         }
@@ -51,14 +38,14 @@ const Registration = () => {
             error.username = "Name cannot exceed more than 10 characters";
         }
         if (!values.email) {
-            error.email = "Email is required";
+            error.email = "Email is required*";
         } else if (!regex.test(values.emails)) {
             error.emails = "This is not Valid Email formate*";}
             if (!values.password) {
-                error.password = "Password. is required";
+                error.password = "Password. is required*";
             }
             if (!values.mobile) {
-                error.mobile = "Mobile No. is required";
+                error.mobile = "Mobile No. is required*";
             }else if (values.mobile.length < 10) {
                 error.mobile = "Name must be more than 10 characters";
             }
@@ -69,7 +56,6 @@ const Registration = () => {
                 <div className="border w-50">
                     <div className="form bg-light">
                         <h2 className='floatheading'><b>Registration</b></h2>
-
                         <form action="" onSubmit={handleSubmit} className='p-4'>
                             <div className="row g-2">
                                 <div className="col-md">
@@ -81,7 +67,7 @@ const Registration = () => {
                                     </div>
                                 </div>
                             </div>
-                            <p>{formErrors.username}</p>
+                            <p style={{color:"red"}}>{formErrors.username}</p>
                             <div className="row g-2">
                                 <div className="col-md">
                                     <label className="form-label">Email:</label>
@@ -93,7 +79,7 @@ const Registration = () => {
                                     </div>
                                 </div>
                             </div>
-                            <p>{formErrors.email}</p>
+                            <p style={{color:"red"}}>{formErrors.email}</p>
 
                             <div className="row g-2">
                                 <div className="col-md">
@@ -106,9 +92,7 @@ const Registration = () => {
                                     </div>
                                 </div>
                             </div>
-                            <p>{formErrors.password}</p>
-
-
+                            <p style={{color:"red"}}>{formErrors.password}</p>
                             <div className="row g-2">
                                 <div className="col-md">
                                     <label className="form-label">Mobile No.:</label>
@@ -120,7 +104,7 @@ const Registration = () => {
                                     </div>
                                 </div>
                             </div>
-                            <p>{formErrors.mobile}</p>
+                            <p style={{color:"red"}}>{formErrors.mobile}</p>
 
 
                             <p className="full-width">
