@@ -28,7 +28,7 @@ export default function Cartmodal({ setModal, modal, cartValue }) {
                     </Modal.Title>
                     <CloseButton onClick={() => setModal(false)} />
                 </Modal.Header>
-                {cartValue?.map((post, index) => {                    
+                {cartValue?.map((post, index) => {                      
                   
                     return (
                         <Modal.Body>

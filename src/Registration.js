@@ -2,7 +2,7 @@ import { React, useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import './Registration.css'
 
-export default function Registration({ values, setValues, formValues, setFormValues, intialValues }) {
+export default function Registration({values, setValues, formValues, setFormValues, intialValues}) {
 
     const [formErrors, setFormErrors] = useState({})
     const [isSubmit, setIsSubmit] = useState(false)
@@ -14,6 +14,7 @@ export default function Registration({ values, setValues, formValues, setFormVal
     const handleSubmit = (e) => {
         e.preventDefault();
         setFormErrors(validate(formValues))
+        const error = validate(formValues);
         setIsSubmit(true)
         // setValues([...values, formValues]);
         // localStorage.setItem('lists', JSON.stringify(values))
@@ -106,17 +107,33 @@ export default function Registration({ values, setValues, formValues, setFormVal
                             </div>
                         </div>
                         <p style={{ color: "red" }}>{formErrors.mobile}</p>
-
-
                         <p className="full-width">
-                            <input type="submit" className="btn btn-primary mt-3 float" value="Register" />
+                            <input type="submit" href="#myModal" data-toggle="modal" className="btn btn-primary mt-3 float trigger-btn" value="Register" />
                         </p>
+                        
                         <p className="text-dark text-center" >Already Register?
                             <Link className="text-dark mt-3" to="/login">Login Here</Link></p>
 
                     </form>
                 </div>
-
+                <div id="myModal" className="modal fade">
+                <div className="modal-dialog modal-confirm">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <div className="icon-box">
+                                <i className="material-icons">&#xE876;</i>
+                            </div>
+                            <h4 className="modal-title w-100">Registered successfully!</h4>
+                        </div>
+                        <div className="modal-body">
+                            <p className="text-center">Now You are can Login BookMania.</p>
+                        </div>
+                        <div className="modal-footer">
+                            <button className="btn btn-success btn-block" data-dismiss="modal">OK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             </div>
         </div>

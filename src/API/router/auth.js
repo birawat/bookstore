@@ -9,7 +9,7 @@ router.get('/getAllBooks',async (req,res)=>{
     let data = await AllBooks.find();
       res.setHeader('Access-Control-Allow-Origin', '*');
      res.send(data)
-   
+   console.log(data)
 })
 
 //storage
