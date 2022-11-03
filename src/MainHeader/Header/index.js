@@ -3,7 +3,7 @@ import CartIcon from './CartIcon';
 import Favorite from './Favorite';
 import Icon from './Icon';
 import Search from './Search';
-export default function Header({ setModal, cartValue}) {
+export default function Header({text,setText, setModal, cartValue}) {
 	return (
 		<div>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
@@ -16,7 +16,7 @@ export default function Header({ setModal, cartValue}) {
 								<Icon/>
 							</div>
 							<div className="col-lg-6 col-12 order-lg-2 order-3 text-lg-left text-right">
-								<Search />
+								<Search text={text} setText={setText}/>
 							</div>
 							<div className="col-lg-4 col-9 order-lg-3 order-2 text-lg-left text-right">
 								<div className="wishlist_cart d-flex flex-row align-items-center justify-content-end">

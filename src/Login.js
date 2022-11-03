@@ -31,15 +31,17 @@ export const Login = () => {
 
 
         // })
-        let check = list.filter((post) =>
-            formValues.email === post.email || formValues.email === post.username && formValues.password === post.password)
-
-        if(check.length > 0){
-            setSucessLogin(true);
-            setUser(check[0].username)
-        }
-
+        let check = list.filter((post)=>
+        formValues.email===post.email||formValues.username===post.username&&formValues.password===post.password)
+       
+       setUser(check[0].username)
+       
+     
     }
+
+       
+
+    
 
     const validate = (values) => {
         const errros = {}

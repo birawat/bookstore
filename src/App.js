@@ -26,6 +26,8 @@ import  Registration from './Registration';
 import Seller from './MainContent/Seller';
 import PaymentDetail from './MainContent/PaymentDetail'
 import Author from './MainContent/Author';
+import Categories from './MainContent/Home/Categories';
+import { HomeNavbar } from './HomeNavbar';
 
 
 
@@ -33,18 +35,19 @@ import Author from './MainContent/Author';
 function App() {
   const [modal, setModal] = useState(false);
   const [cartValue, setCartValue] = useState([]);
- 
+  const [name,setName] = useState("");
   const cartValues = cartValue;
   const [values, setValues] = useState([])
   const intialValues = { username: "", email: "", mobile: "", password: "" };
   const [formValues, setFormValues] = useState(intialValues)
+  const [text,setText ] = useState('');
   // let card = [];
   return (  
       <BrowserRouter>
-        <MainHeader setModal={setModal} cartValue={cartValue} cartValues={cartValues}/>
+        <MainHeader text={text} setText={setText} name={name} setName={setName} setModal={setModal} cartValue={cartValue} cartValues={cartValues} setCartValue={setCartValue}/>
         <MainContent setModal={setModal} modal={modal} cartValue={cartValue}/>        
         <Routes>
-          <Route path='/' element={<Home cartValue={cartValue} setCartValue={setCartValue} />}/>
+          <Route path='/' element={<Home name={name} setName={setName} cartValue={cartValue} setCartValue={setCartValue} />}/>
           <Route path='/about' element={<About/>}/>
           <Route path='/contact' element={<Contact/>}/>
           <Route path='/career' element={<Career/>}/>
@@ -63,10 +66,11 @@ function App() {
           <Route path='/wishlist' element={<Wishlist/>}/>
           <Route path='/requestbook' element={<RequestBook/>}/>
           <Route path='/login' element={<Login/>}/> 
-         
+          <Route path='/categoires' element={<Categories text={text} setText={setText} name={name} setName={setName} cartValue={cartValue} cartValues={cartValues} setCartValue={setCartValue}/>}/>
           <Route path='/seller' element={<Seller/>}/>    
           <Route path='/paymentDetail' element={<PaymentDetail/>}/>
           <Route path='/author' element={<Author/>}/>
+         
         </Routes>
         <Footer/>
       </BrowserRouter>  

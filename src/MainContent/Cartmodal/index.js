@@ -19,16 +19,16 @@ export default function Cartmodal({ setModal, modal, cartValue }) {
                             <div style={{ justifyContent: "space-between", display: "flex", width: "50vw", fontSize: "20px" }}>My Shopping Cart (1 items)
                             </div>
                             <div style={{ justifyContent: "space-between", display: "flex", width: "50vw", fontSize: "15px" }}>
-                                <span>Sr.</span>
-                                <span>Item Description</span>
-                                <span>Quantity</span>
+                                <span>Image</span>
+                                <span>Description</span>
+                                <span>Category</span>
                                 <span>Item Price</span>
                             </div>
                         </Stack>
                     </Modal.Title>
                     <CloseButton onClick={() => setModal(false)} />
                 </Modal.Header>
-                {cartValue?.map((post, index) => {                      
+                {cartValue?.map((post, index) => {       
                   
                     return (
                         <Modal.Body>
@@ -39,7 +39,7 @@ export default function Cartmodal({ setModal, modal, cartValue }) {
                                             <div className="d-flex justify-content-between">
                                                 <div class="d-flex flex-row align-items-center">
                                                     <div>
-                                                        <img src={post.imageLinks ? post.imageLinks : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.pn"} 
+                                                        <img src={post.post.imageLinks ? post.post.imageLinks : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.pn"} 
                                                             className="img-fluid rounded-3" alt="Shopping item" style={{ width: "65px" }} />
                                                     </div>
                                                     <div>
@@ -51,7 +51,7 @@ export default function Cartmodal({ setModal, modal, cartValue }) {
                                                         <h5 className="fw-normal mb-0">{post.post.category}</h5>
                                                     </div>
                                                     <div style={{ width: "130px" }}>
-                                                        <h5 className="mb-0">$30</h5>
+                                                        <h5 className="mb-0">{post.post.price}</h5>
                                                     </div>
                                                 </div>
 

@@ -2,8 +2,13 @@ import React from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { Link } from 'react-router-dom';
 import HomeNavData from './HomeNavData';
-export const HomeNavbar = () => {
+export const HomeNavbar = ({name,setName,cartValue,setCartValue}) => {
+    const navClick = (event) =>{
+        setName(event.target.name)
+      
+    }
     return (
         <div >
             <Navbar
@@ -15,10 +20,13 @@ export const HomeNavbar = () => {
                             {HomeNavData.map((value) => {
                                 
                                 return (
-                                    <Nav.Link href="#home" style={{ fontSize: '18px', marginRight: '100px' }}>
-                                        <img src={value.imgsrc} width="61px" height="61px" alt={value.alt} />
+                                    <Nav.Link   style={{ fontSize: '18px', marginRight: '100px' }}>
+                                      <Link onClick={navClick} to="/categoires">  
+                                      <img name={value.name}  src={value.imgsrc} width="61px" height="61px" alt={value.alt} />
                                         <br />
-                                        <p style={{ marginLeft: '10px' }}>{value.name}</p></Nav.Link>
+                                        <p style={{ marginLeft: '10px' }}>{value.name} </p>
+                                        </Link>
+                                       </Nav.Link>
                                 )
                             })}
                         </Nav>

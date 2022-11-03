@@ -1,7 +1,13 @@
-import React from 'react'
+import {React,useState} from 'react'
 import { Link } from 'react-router-dom'
-
-export default function Navbar() {
+import { AllApi } from '../../AllApi';
+export default function Navbar({name,setName,cartValue,setCartValue}) {
+	
+	//const apiData = AllApi();
+ const categoryName = (event)=>{
+	setName(event.target.name)
+ }
+	
 	return (
 		<div>
 			<nav className="main_nav" style={{ backgroundColor: "darkblue" }}>
@@ -12,21 +18,23 @@ export default function Navbar() {
 								<div className="main_nav_menu" >
 									<ul className="standard_dropdown main_nav_dropdown" >
 										<li >
-											<Link href="#" id="books" className='text-white' to="/">Books</Link>
+											<Link href="#" id="books" className='text-white'  to="/">Books</Link>
 										</li>
 										<li className="hassubs">
-											<a href="#" id="newArrivals" className='text-white'>New Arrivals</a>
+											<Link href="#" id="newArrivals" name="New Arrivals" onClick={categoryName} className='text-white' to="/categoires">New Arrivals</Link>
 										</li>
 										<li className="hassubs">
-											<a href="#" className='text-white'>Box Sets</a>
+										<Link href="#" id="newArrivals" name="Box Sets" onClick={categoryName} className='text-white' to="/categoires">Box Sets</Link>
 										</li>
 										<li className="hassubs">
-											<a href="#" className='text-white'>Best sellers</a>
-
+											<Link href="#" id="newArrivals" name="Best Sellers" onClick={categoryName} className='text-white' to="/categoires">Best Sellers</Link>
 										</li>
-										<li><a href="blog.html" className='text-white'>Fiction Books</a></li>
-
-										<li><a href="contact.html" className='text-white'>Award Winners</a></li>
+										<li>
+										<Link href="#" id="newArrivals" name="Fiction Books" onClick={categoryName} className='text-white' to="/categoires">Fiction Books</Link>
+										</li>
+										<li>
+										<Link href="#" id="newArrivals" name="Award Winners" onClick={categoryName} className='text-white' to="/categoires">Award Winners</Link>
+										</li>
 										<li><Link href="contact.html" className='text-white' to="/author">Featured Authors</Link></li>
 										<li>
 											<Link href="contact.html" className='text-white' to="/requestbook">Request a Book</Link>

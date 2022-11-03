@@ -8,10 +8,11 @@ import "slick-carousel/slick/slick-theme.css";
 import { AllApi } from '../../AllApi'
 import App from '../../App';
 
-const Home = ({cartValue, setCartValue, cartValues}) => {
+const Home = ({name,setName,cartValue, setCartValue, cartValues}) => {
   const [key,setKey] = useState(false)
   const [buttontext, setButtontext] = useState("Add Cart");
-  const apiData = AllApi();
+ 
+   const apiData = AllApi();
 
 
 
@@ -72,7 +73,7 @@ return (
     <div className='home'>
       <Sliders />
       <hr />
-      <HomeNavbar />
+      <HomeNavbar name={name} setName={setName}/>
       <hr />
       <h2> <span id="ctl00_phBody_NewArrival_lblHeaderTitle">Now Trending</span> </h2>
       <Slider {...settings}>
@@ -89,7 +90,7 @@ return (
                     <div className="card-body">
                     <p className="card-title title"><b>{post.name}</b></p>
                     <p className="card-title title"><b>{post.description.length>=20 ? post.description.substring(0,20)+"...":post.description}</b></p>
-                    <p className='p1'><b>$30</b></p>
+                    <p className='p1'><b>{post.price}</b></p>
                     <p className='p1'><b>{post.category}</b></p>
                       <div className='div'><b><h5 className='price'>{post.isAvailable}</h5></b>
                       <button className="round-black-btn small-btn text-size-sm" id={index} onClick={(e) => {

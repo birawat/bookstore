@@ -22,7 +22,7 @@ const HomeNavData = [
     {
         imgsrc:"https://d2g9wbak88g7ch.cloudfront.net/staticimages/icon5.png",
         alt:"Fictions Books",
-        name:"Fictions Books"
+        name:"Fiction Books"
     },
     {
         imgsrc:"https://d2g9wbak88g7ch.cloudfront.net/staticimages/tarot.png",
