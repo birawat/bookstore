@@ -29,6 +29,7 @@ import Author from './MainContent/Author';
 import Categories from './MainContent/Home/Categories';
 import { HomeNavbar } from './HomeNavbar';
 
+import CopyrightPolicy from './MainContent/CopyrightPolicy';
 
 
 
@@ -71,6 +72,8 @@ function App() {
           <Route path='/paymentDetail' element={<PaymentDetail/>}/>
           <Route path='/author' element={<Author/>}/>
          
+          <Route path='/copyrightPolicy' element={<CopyrightPolicy/>}/>
+          
         </Routes>
         <Footer/>
       </BrowserRouter>  
