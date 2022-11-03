@@ -34,7 +34,7 @@ const Footer = () => {
                 </div>
                 <div className="bg-light py-2 footer"  >
                     <div className="container text-center">
-                        <CopyrightPolicy />
+                        <CopyrightPolicy/>
                     </div>
                 </div>
             </footer>
