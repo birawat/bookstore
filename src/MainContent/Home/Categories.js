@@ -10,7 +10,7 @@ const Categories = ({text,setText, name, setName, cartValue, setCartValue }) => 
     const apiData = AllApi();
     
     const filterData = apiData[0]?.data.filter((newData) => {
-        return newData.category == name || newData.name == text;
+        return newData.category === name || newData.name === text;
     })
    
 

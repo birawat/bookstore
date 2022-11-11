@@ -2,31 +2,48 @@ import { React, useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import './Registration.css'
 
-export default function Registration({values, setValues, formValues, setFormValues, intialValues}) {
-
+export default function Registration({values, setValues, intialValues}) {
+    const [formValues, setFormValues] = useState(intialValues)
     const [formErrors, setFormErrors] = useState({})
-    const [isSubmit, setIsSubmit] = useState(false)
+   
     // const [values, setValues] = useState([])
+    const [succesful,setSuccesful] = useState(false)
     const onHandleChange = (e) => {
         const { name, value } = e.target;
+        // console.log(name)
+        // console.log(value)
         setFormValues({ ...formValues, [name]: value })
+       // console.log(formValues)
+    }
+    const onRegister = () => {
+         //setFormValues(intialValues);
     }
     const handleSubmit = (e) => {
         e.preventDefault();
+      
         setFormErrors(validate(formValues))
         const error = validate(formValues);
-        setIsSubmit(true)
-        // setValues([...values, formValues]);
-        // localStorage.setItem('lists', JSON.stringify(values))
-        // setFormValues(intialValues);
-        // console.log("successfully registration")
+       
+        setValues([...values, formValues]);
+        
     }
+   
     useEffect(() => {
-        console.log(formErrors)
-        if (Object.keys(formErrors.length === 0 && isSubmit)) {
+        
+      
+        localStorage.setItem('lists', JSON.stringify(values))
 
+        if(formValues.username.length==0&&formValues.email.length==0&&formValues.password.length==0&&formValues.mobile.length==0)
+        {
+            setSuccesful(false)
+        }else{
+            alert("Successfully Registered")
         }
-    }, [formErrors])
+     //  
+     setFormValues(intialValues);
+       //localStorage.clear()
+      
+    }, [formErrors, values,succesful])
     const validate = (values) => {
         const error = {};
         const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
@@ -50,6 +67,8 @@ export default function Registration({values, setValues, formValues, setFormValu
             error.mobile = "Mobile No. is required*";
         } else if (values.mobile.length < 10) {
             error.mobile = "Name must be more than 10 characters";
+        }else if (values.mobile.length > 10) {
+            error.mobile = "Name not more than 10 characters";
         }
         return error;
     }
@@ -116,25 +135,7 @@ export default function Registration({values, setValues, formValues, setFormValu
 
                     </form>
                 </div>
-                <div id="myModal" className="modal fade">
-                <div className="modal-dialog modal-confirm">
-                    <div className="modal-content">
-                        <div className="modal-header">
-                            <div className="icon-box">
-                                <i className="material-icons">&#xE876;</i>
-                            </div>
-                            <h4 className="modal-title w-100">Registered successfully!</h4>
-                        </div>
-                        <div className="modal-body">
-                            <p className="text-center">Now You are can Login BookMania.</p>
-                        </div>
-                        <div className="modal-footer">
-                            <button className="btn btn-success btn-block" data-dismiss="modal">OK</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+          
             </div>
         </div>
     )

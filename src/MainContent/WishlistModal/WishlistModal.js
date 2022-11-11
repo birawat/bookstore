@@ -1,19 +1,18 @@
 import React from 'react'
-import './Cartmodal.css';
+import './WishlistModal.css';
 import Stack from 'react-bootstrap/Stack';
 import { Modal, Button, CloseButton, } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
-export default function Cartmodal({ setModal, modal, cartValue }) {
-    
+export default function WishlistModal({  wishlistValue,wishlistModal,setWishlistModal }) {
 
-
+   
 
     const initModal = () => {
-        setModal(false)
+        setWishlistModal(false)
     }
     return (
         <div >
-            <Modal className="main-div" show={modal} size="lg" >
+            <Modal className="main-div" show={wishlistModal} size="lg" >
                 <Modal.Header>
                     <Modal.Title>
                         <Stack gap={4}>
@@ -27,10 +26,10 @@ export default function Cartmodal({ setModal, modal, cartValue }) {
                             </div>
                         </Stack>
                     </Modal.Title>
-                    <CloseButton onClick={() => setModal(false)} />
+                    <CloseButton onClick={() => setWishlistModal(false)} />
                 </Modal.Header>
-                {cartValue?.map((post, index) => {
-                   
+                {wishlistValue?.map((post, index) => {       
+                  
                     return (
                         <Modal.Body>
                             <div className="col">
@@ -40,25 +39,21 @@ export default function Cartmodal({ setModal, modal, cartValue }) {
                                             <div className="d-flex justify-content-between">
                                                 <div class="d-flex flex-row align-items-center">
                                                     <div>
-                                                        <img src={post.post.imageLinks
-                                                            ? post.post.imageLinks :
-                                                            post.post.post.imageLinks
-                                                        }
-                                                            className="img-fluid rounded-3"
-                                                            alt="Shopping item"
-                                                            style={{ width: "65px" }} />
+                                                        <img src={post.post.imageLinks ? post.post.imageLinks : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.pn"} 
+                                                            className="img-fluid rounded-3" alt="Shopping item" style={{ width: "65px" }} />
                                                     </div>
                                                     <div>
-                                                        <h5 style={{ marginLeft: "65px" }}><b>{post.post.description ? post.post.description : post.post.post.description}</b></h5>
+                                                        <h5 style={{ marginLeft: "65px" }}>{post.post.description.length >= 20 ? post.post.description.substring(0, 20) + "..." : post.post.description}</h5>
                                                     </div>
                                                 </div>
                                                 <div className="d-flex flex-row align-items-center">
                                                     <div style={{ width: "200px" }}>
-                                                        <h5 className="fw-normal mb-0">{post.post.category ? post.post.category : post.post.post.category}</h5>
+                                                        <h5 className="fw-normal mb-0">{post.post.category}</h5>
                                                     </div>
                                                     <div style={{ width: "130px" }}>
-                                                        <h5 className="mb-0">{post.post.price ? post.post.price : post.post.post.price}</h5>
+                                                        <h5 className="mb-0">{post.post.price}</h5>
                                                     </div>
+                                                    
                                                 </div>
 
                                             </div>

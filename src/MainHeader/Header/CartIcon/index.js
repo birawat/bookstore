@@ -2,6 +2,7 @@ import React from 'react'
 
 
 export default function CartIcon({ setModal, cartValue}) {
+  console.log("cartValue",cartValue)
   let length = cartValue.length? cartValue.length :0;
 
   return (

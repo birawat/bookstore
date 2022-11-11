@@ -8,10 +8,10 @@ import "slick-carousel/slick/slick-theme.css";
 import { AllApi } from '../../AllApi'
 import App from '../../App';
 
-const Home = ({name,setName,cartValue, setCartValue, cartValues}) => {
+const Home = ({name,setName,cartValue,wishlistValue, setCartValue,setWishlistValue, cartValues}) => {
   const [key,setKey] = useState(false)
   const [buttontext, setButtontext] = useState("Add Cart");
- 
+  const [buttontexts, setButtontexts] = useState("Add Wishlist");
    const apiData = AllApi();
 
 
@@ -81,7 +81,7 @@ return (
           apiData[0]?.data.map((post,index) => {
           //   post.key=false
           //  let val = post.key;
-          
+        
             return (
               <div className=" m-3 mainborder card ">
                 <div className='divimage mt-2'>
@@ -95,14 +95,21 @@ return (
                       <div className='div'><b><h5 className='price'>{post.isAvailable}</h5></b>
                       <button className="round-black-btn small-btn text-size-sm" id={index} onClick={(e) => {
                         
-              
+                       
                         setCartValue([...cartValue,{post}])                    
-                        
+                       
                         index===e.target.id ?setButtontext("Added to cart")
                          : setButtontext("Add cart")                
                       }}>{buttontext}</button>
                       
-                      <button className="round-red-btn small-btn mt-2" >Add Wishlist</button>
+                      <button className="round-red-btn small-btn mt-2" id={index} onClick={(e)=>{
+                    
+                        setWishlistValue([...wishlistValue,{post}])
+                       
+                        index===e.target.id?setButtontexts("Added to Wishlist")
+                        : setButtontexts("Add Wishlist")
+                      }}>{buttontexts}</button>
+
                       </div>
                     </div>
                   </div>

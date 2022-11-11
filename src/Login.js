@@ -18,28 +18,31 @@ export const Login = () => {
     const onLogedin = () => {
         // setFormValues(intialValues);
     }
-    const handleSubmit = (e) => {
-        debugger;
+    const handleSubmit = (e) => {debugger
         e.preventDefault();
         setFormErrors(validate(formValues))
         setIsSubmit(true)
-
         let list = JSON.parse(localStorage.getItem('lists'))
-
-        // list.map((post)=>{
-        //     formValues.email===post.email||post.username&&formValues.password===post.password?
-
-
-        // })
         let check = list.filter((post)=>
-        formValues.email===post.email||formValues.username===post.username&&formValues.password===post.password)
+        formValues.email===post.email&&formValues.password===post.password)
        
-       setUser(check[0].username)
-       
-     
+        if(check[0]==null){
+            setUser("")
+            setSucessLogin(false) 
+           // alert("Failed")
+         }
+       else{
+        setUser(check[0].username)
+        setSucessLogin(true)
+       }
+   
     }
 
+    // useEffect(() =>{debugger
+
+    
        
+    // },[user])
 
     
 
@@ -90,11 +93,11 @@ export const Login = () => {
                                 </div></div></div>
                         <p style={{ color: "red" }}>{formErrors.password}</p>
                         <p className="full-width">
-                            <input type="submit" data-toggle="modal" onClick={(e) => handleSubmit(e)} className=" trigger-btn btn btn-primary mt-3 float" value="Login" />
+                            <input type="submit" href="#myModal" data-toggle="modal" onClick={(e) => handleSubmit(e)} className=" trigger-btn btn btn-primary mt-3 float" value="Login" />
                         </p>
                         <p className="text-dark float-end" >New To BooksMania?
                             <Link className="text-dark mt-3" to="/Registration">Register Here</Link></p>
-                        {sucessLogin &&
+                        { sucessLogin?
                             <div id="myModal" className="modal fade ">
                                 <div className="modal-dialog modal-confirm " style={{ marginTop: "150px" }}>
                                     <div className="modal-content">
@@ -102,7 +105,7 @@ export const Login = () => {
                                             <div className="icon-box">
                                                 <i className="material-icons">&#xE876;</i>
                                             </div>
-                                            <h4 className="modal-title w-100">Thanks!</h4>
+                                            <h4 className="modal-title w-100">Thanks {user}!</h4>
                                         </div>
                                         <div className="modal-body">
                                             <p className="text-center">Login Successfully</p>
@@ -112,8 +115,23 @@ export const Login = () => {
                                         </div>
                                     </div>
                                 </div>
-                            </div>}
-
+                            </div>
+                       :<div id="myModal" className="modal fade ">
+                       <div className="modal-dialog modal-confirm " style={{ marginTop: "150px" }}>
+                           <div className="modal-content">
+                               <div className="modal-header">
+                                  
+                                  
+                               </div>
+                               <div className="modal-body">
+                                   <p className="text-center">Login Failed</p>
+                               </div>
+                               <div className="modal-footer">
+                                   <button className="btn btn-danger btn-block" data-dismiss="modal" onClick={onLogedin()}>OK</button>
+                               </div>
+                           </div>
+                       </div>
+                   </div> }
                     </form>
                 </div>
 

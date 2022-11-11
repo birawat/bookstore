@@ -53,7 +53,8 @@ export default function Seller() {
             )
         })
         const resp = await res.json()
-     
+        alert("save successfully")
+        setFormValues(intialValues);
     }
 
     return (
